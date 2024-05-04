@@ -1,2 +1,7 @@
 # image-based-lighting
+
 Recover HDR Radiance Maps and add Synthetic 3-D Objects to an Image such that it interacts with the image's light field
+
+The file [Image_Based_Lighting.ipynb](Image_Based_Lighting.ipynb) contains the core runnable code for the project.
+
+HDR images are widely used by graphics and visual effects artists for a variety of applications such as hyper-realistic art and image-based lighting. I will focus on their use in image-based lighting, specifically relighting virtual objects. One way to relight an object is to capture an 360 degree panoramic HDR photograph of a scene, which provides lighting information from all angles incident to the camera. Capturing such an image is difficult with standard cameras, because it requires both panoramic image stitching and LDR to HDR conversion. An easier alternative is to capture an HDR photograph of a spherical mirror, which provides the same omni-directional lighting information (up to some physical limitations dependent on sphere size and camera resolution). I will take the spherical mirror approach, inspired primarily by Prof. Debevec's paper, which can be found [here](http://www.pauldebevec.com/Research/IBL/debevec-siggraph98.pdf). With this panoramic HDR image, we can then relight 3D models and composite them seamlessly into photographs. This is a very quick method for inserting computer graphics models seamlessly into photographs and videos; much faster and more accurate than manually "photoshopping" objects into the photo.
